@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07111f" />
+    <meta name="description" content="InvestGuard — understand your investment behavior before it becomes a habit." />
+    <title>InvestGuard · Behavioral Investing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="toast-root" aria-live="polite"></div>
+    <div class="app-shell">
+      <aside class="sidebar" id="sidebar">
+        <div class="brand-row" data-route="landing" title="Open InvestGuard home">
+          <div class="brand-mark"><span></span><span></span><span></span></div>
+          <div class="brand-name">Invest<span>Guard</span></div>
+          <button class="icon-btn sidebar-close" data-action="close-sidebar" aria-label="Close menu">×</button>
+        </div>
+        <div class="demo-pill"><span class="pulse-dot"></span><div><strong>Demo Mode</strong><small>Fictional account</small></div><button class="switch-btn" data-action="reset-demo" title="Reset demo">↻</button></div>
+        <nav class="main-nav" aria-label="Main navigation">
+          <div class="nav-label">Workspace</div>
+          <button class="nav-item active" data-route="dashboard"><span class="nav-icon">⌂</span>Overview</button>
+          <button class="nav-item" data-route="portfolio"><span class="nav-icon">◫</span>Portfolio</button>
+          <button class="nav-item" data-route="transactions"><span class="nav-icon">⇄</span>Transactions <em class="nav-count">12</em></button>
+          <button class="nav-item" data-route="analysis"><span class="nav-icon">◌</span>Behavior analysis</button>
+          <button class="nav-item" data-route="alerts"><span class="nav-icon">♢</span>Smart alerts <em class="nav-count alert-count">3</em></button>
+          <div class="nav-label spaced">Plan & reflect</div>
+          <button class="nav-item" data-route="journal"><span class="nav-icon">▤</span>Investment journal</button>
+          <button class="nav-item" data-route="planner"><span class="nav-icon">⌁</span>Investment planner</button>
+          <button class="nav-item" data-route="learn"><span class="nav-icon">✦</span>Learn</button>
+        </nav>
+        <div class="sidebar-footer">
+          <div class="privacy-note"><span>◇</span><p>Your data stays private.<br /><a href="#">How InvestGuard works ↗</a></p></div>
+          <div class="profile-row"><div class="avatar">AR</div><div><strong>Alex Rao</strong><small>Free workspace</small></div><span class="more">•••</span></div>
+        </div>
+      </aside>
+      <main class="main-content">
+        <header class="topbar">
+          <button class="icon-btn mobile-menu" data-action="open-sidebar" aria-label="Open menu">☰</button>
+          <div class="breadcrumb"><span>Workspace</span><b>/</b><strong id="breadcrumb-current">Overview</strong></div>
+          <div class="top-actions"><div class="data-status"><span class="status-dot"></span>Live demo data <i>ⓘ</i></div><button class="icon-btn" data-action="show-shortcuts" aria-label="Notifications">♧<span class="notification-mark"></span></button><div class="top-avatar">AR</div></div>
+        </header>
+        <div class="page-wrap" id="page-wrap"></div>
+      </main>
+    </div>
+
+    <div class="modal-backdrop" id="modal-backdrop" hidden>
+      <section class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"></section>
+    </div>
+    <script src="app.js"></script>
+  </body>
+</html>
